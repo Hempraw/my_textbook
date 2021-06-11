@@ -1,7 +1,7 @@
 <h2>トップページ</h2>
 <%= link_to '新規投稿ページ', new_textbook_path %>
 <% @textbooks.each do |textbook| %>
-  <h1><%= textbook.name %></h1>
-  <h2><%= textbook.item %></h2>
-  <h3><%= textbook.content %></h3>
+  <%= link_to textbook_path(textbook.id) do %>
+    <h1><%= textbook.name %></h1>
+  <% end %>
 <% end %>

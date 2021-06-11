@@ -1,0 +1,9 @@
+<h2>詳細ページ<h2>
+<h2><%= link_to '編集', edit_textbook_path(@textbook.id) %></h2>
+<h1><%= link_to '削除', textbook_path(@textbook.id), method: :delete %>
+<h3>言語</h3>
+<%= @textbook.name %>
+<h3>項目</h3>
+<%= @textbook.item %>
+<h3>内容</h3>
+<%= @textbook.content %>
