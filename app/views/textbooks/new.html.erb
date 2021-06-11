@@ -1,0 +1,10 @@
+<h2>新規投稿ページ</h2>
+<%= form_with model: @textbook, local: true do |f| %>
+  <div>言語</div>
+  <%= f.text_field :name, placeholder: "Ruby on Rails" %>
+  <div>項目</div>
+  <%= f.text_field :item, placeholder: "基礎" %>
+  <div>内容</div>
+  <%= f.text_area :content %>
+  <%= f.submit "登録" %>
+<% end %>
