@@ -1,0 +1,10 @@
+<h1>items controller new action page</h1>
+<%= form_with model: @item, local: true do |f| %>
+  <div>言語</div>
+  <%= f.collection_select(:language_id, Language.all, :id, :name, {}) %>
+  <div>タイトル</div>
+  <%= f.text_field :title, placeholder: "タイトルを入力" %>
+  <div>内容</div>
+  <%= f.text_area :content %>
+  <%= f.submit "送信" %>
+<% end %>
