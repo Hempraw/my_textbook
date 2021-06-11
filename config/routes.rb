@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'textbooks#index'
-  resources :textbooks
+  devise_for :users
+  root to: 'items#index'
+  resources :items
+  resources :users
 end
