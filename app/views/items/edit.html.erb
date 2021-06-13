@@ -1,5 +1,5 @@
-<h1>items controller new action page</h1>
-<span><%= link_to "トップページ", root_path %></span>
+<h1>items controller edit action page</h1>
+<span><%= link_to "戻る", item_path(@item.id) %>
 <%= form_with model: @item, local: true do |f| %>
   <div>言語</div>
   <%= f.collection_select(:language_id, Language.all, :id, :name, {}) %>
