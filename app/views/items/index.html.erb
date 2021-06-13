@@ -1,24 +1,30 @@
 <h1>items controller index action page</h1>
-<ul>
+<div>
   <% if user_signed_in? %> 
-    <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
-    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+    <%= link_to current_user.nickname, "#" %>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
   <% else %>
-    <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-    <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+    <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+    <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
   <% end %>
-</ul>
-<%= link_to "新規投稿", new_item_path %>
+</div>
+
+<div>
+  <%= link_to "新規投稿", new_item_path %>
+</div>
+
 <div>
   <% @items.each do |item| %>
-  <div>
-    <%= item.language.name %>
-  </div>
-  <div>
-    <%= item.title %>
-  </div>
-  <div>
-    <%= item.content %>
-  </div>
+    <%= link_to item_path(item.id) do %>
+      <div>
+        <%= item.language.name %>
+      </div>
+      <div>
+        <%= item.title %>
+      </div>
+      <div>
+        <%= item.content %>
+      </div>
+    <% end %>
   <% end %>
 </div>
