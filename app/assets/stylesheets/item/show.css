@@ -1,0 +1,57 @@
+.show-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #cfd8dc;
+}
+
+.show-main {
+  width: calc(100vw - 20vw);
+  height: 100vh;
+  padding: 2vh 2vw;
+  background-color: #f6f6f4;
+}
+
+.show-nav {
+  margin-bottom: 2vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-item-edit {
+  margin-right: 1vw;
+  padding-right: 2vw;
+}
+
+.show-contents {
+  display: grid;
+  /* 列 */
+  grid-template-columns: 100%;
+  /* 行 */
+  grid-template-rows: auto auto 1fr; 
+}
+
+.language {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #696969;
+  margin: 3vh 0;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #696969;
+  margin: 3vh 0;
+}
+
+.content {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #696969;
+  margin: 3vh 0;
+}
