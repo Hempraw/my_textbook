@@ -35,21 +35,21 @@
   grid-template-rows: auto auto 1fr; 
 }
 
-.language {
+.show-language {
   font-size: 20px;
   font-weight: bold;
   border-bottom: 1px solid #696969;
   margin: 3vh 0;
 }
 
-.title {
+.show-title {
   font-size: 20px;
   font-weight: bold;
   border-bottom: 1px solid #696969;
   margin: 3vh 0;
 }
 
-.content {
+.show-content {
   font-size: 20px;
   font-weight: bold;
   border-bottom: 1px solid #696969;

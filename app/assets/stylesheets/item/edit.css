@@ -1,0 +1,28 @@
+
+.edit-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #cfd8dc;
+}
+
+.edit-main {
+  width: calc(100vw - 20vw);
+  height: 100vh;
+  padding: 2vh 2vw;
+  background-color: #f6f6f4;
+}
+
+.edit-nav {
+  margin-bottom: 2vh;
+}
+
+.edit-detail-title {
+  width: 100%;
+}
+
+.edit-detail-content {
+  width: 100%;
+  height: calc( 100vh - 10vh - 30vh );
+  padding: 8px 8px 4px;
+  border-radius: 4px;
+}

@@ -1,12 +1,20 @@
 <%= render "shared/header" %>
-<h1>items controller edit action page</h1>
-<span><%= link_to "戻る", item_path(@item.id) %>
-<%= form_with model: @item, local: true do |f| %>
-  <div>言語</div>
-  <%= f.collection_select(:language_id, Language.all, :id, :name, {}) %>
-  <div>タイトル</div>
-  <%= f.text_field :title, placeholder: "タイトルを入力" %>
-  <div>内容</div>
-  <%= f.text_area :content %>
-  <%= f.submit "送信" %>
-<% end %>
+
+<div class="edit-wrapper">
+  <div class="edit-main">
+    <div class="edit-nav">
+      <span><%= link_to "戻る", item_path(@item.id) %></span>
+    </div>
+    <div class="edit-conetents">
+      <%= form_with model: @item, local: true do |f| %>
+        <h1 class="edit-language">言語</h1>
+        <div><%= f.collection_select(:language_id, Language.all, :id, :name, {}, { class: "edit-detail-language" }) %></div>
+        <h1 class="edit-title">タイトル</h1>
+        <div><%= f.text_field :title, class: "edit-detail-title", placeholder: "タイトルを入力" %></div>
+        <h1 class="edit-content">内容</h1>
+        <div><%= f.text_area :content, class: "edit-detail-content" %></div>
+        <div><%= f.submit "送信" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>

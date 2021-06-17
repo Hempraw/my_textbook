@@ -11,16 +11,16 @@
     </div>
     <div class="show-contents">
       <div>
-        <h1 class="language">言語<h1>
-        <div class="detail-language"><%= @item.language.name %></div>
+        <h1 class="show-language">言語<h1>
+        <div class="show-detail-language"><%= @item.language.name %></div>
       </div>
       <div>
-        <h1 class="title">タイトル</h1>
-        <div class="detail-title"><%= @item.title %></div>
+        <h1 class="show-title">タイトル</h1>
+        <div class="show-detail-title"><%= @item.title %></div>
       </div>
       <div>
-        <h1 class="content">内容</h1>
-        <div class="detail-content"><%= @item.content %></div>
+        <h1 class="show-content">内容</h1>
+        <div class="show-detail-content"><%= safe_join(@item.content.split("\n"),tag(:br)) %></div>
       </div>
     </div>
   </div>
