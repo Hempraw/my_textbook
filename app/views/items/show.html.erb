@@ -1,19 +1,27 @@
 <%= render "shared/header" %>
-<div>
-  <h2>item controller show action page</h2>
-  <span><%= link_to "トップページ", root_path %></span>
-  <%= link_to "編集", edit_item_path(@item.id), method: :get %>
-  <%= link_to "削除", item_path(@item.id), method: :delete %>
-  <div>
-    <h3>言語</h3>
-    <%= @item.language.name %>
-  </div>
-  <div>
-    <h3>タイトル</h3>
-    <%= @item.title %>
-  </div>
-  <div>
-    <h3>内容</h3>
-    <%= @item.content %>
+
+<div class="show-wrapper">
+  <div class="show-main">
+    <div class="show-nav">
+        <div><%= link_to "戻る", root_path , class: "show-item-return" %></div>
+        <div class="show-menu">
+          <div><%= link_to "編集", edit_item_path(@item.id), method: :get,class: "show-item-edit" %></div>
+          <div><%= link_to "削除", item_path(@item.id), method: :delete, class: "show-item-delete" %></div>
+        </div>
+    </div>
+    <div class="show-contents">
+      <div>
+        <h1 class="show-language">言語<h1>
+        <div class="show-detail-language"><%= @item.language.name %></div>
+      </div>
+      <div>
+        <h1 class="show-title">タイトル</h1>
+        <div class="show-detail-title"><%= @item.title %></div>
+      </div>
+      <div>
+        <h1 class="show-content">内容</h1>
+        <div class="show-detail-content"><%= simple_format(h(@item.content), class: "show-detail-content") %></div>
+      </div>
+    </div>
   </div>
 </div>

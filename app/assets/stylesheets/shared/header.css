@@ -4,45 +4,56 @@
 
 .header {
   width: 100vw;
+  height: 10vh;
   padding: 2vh 1vw;
   display: flex;
   justify-content: space-between;
-  background-color: #696969;
+  align-items: center;
+  background-color: #455a64;
 }
 
-.title-name {
-  color: white;
+.header-title-name {
+  color: #ffffff;
+  font-size: 20px;
 }
 
-.user-nav {
+.header-user-nav {
   display: flex;
 }
 
-.nav-list {
+.header-nav-list {
   display: flex;
+  font-size: 15px;
 }
 
-.user-name {
+.header-new-post {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
-  margin-right: 1vw;
+  margin-right: 2vw;
 }
 
-.logout {
+.header-user-name {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
+  margin-right: 2vw;
 }
 
-.login {
+.header-logout {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
-  margin-right: 1vw;
 }
 
-.sign-up {
+.header-login {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  margin-right: 2vw;
+}
+
+.header-sign-up {
   text-decoration: none;
   color: white;
   font-weight: bold;

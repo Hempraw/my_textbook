@@ -1,25 +1,27 @@
+<%# ヘッダー %>
 <%= render "shared/header" %>
-<div class="main">
-  <h1>items controller index action page</h1>
-
-  <div>
-    <%= link_to "新規投稿", new_item_path %>
-  </div>
-
-  <div>
-    <% @items.each do |item| %>
-      <%= link_to item_path(item.id) do %>
-        <div>
-          <%= item.language.name %>
-        </div>
-        <div>
-          <%= item.title %>
-        </div>
-        <div>
-          <%= item.content %>
-        </div>
+<div class="index-wrapper">
+  <%# メインコンテンツ %>
+  <div class="index-contents">
+    <div class="index-lists">
+      <h1>items controller index action page</h1>
+      <% @items.each do |item| %>
+        <%= link_to item_path(item.id) do %>
+          <div>
+            <%= item.language.name %>
+          </div>
+        <% end %>
+        <%#
+          <div>
+            <%= item.title 
+          </div>
+          <div>
+            <%= item.content
+          </div>
+        %>
       <% end %>
-    <% end %>
+    </div>
+    <%# フッター %>
+    <%#= render "shared/footer" %>
   </div>
 </div>
-<%#= render "shared/footer" %>

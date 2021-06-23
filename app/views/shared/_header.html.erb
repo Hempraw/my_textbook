@@ -1,15 +1,16 @@
 <header class="header">
-  <div class="title">
-    <h3><%= link_to "My TextBook", root_path, class: "title-name" %></h3>
+  <div class="header-title">
+    <h3><%= link_to "My TextBook", root_path, class: "header-title-name" %></h3>
   </div>
-  <div class="user-nav">
-    <ul class="nav-list">
+  <div class="header-user-nav">
+    <ul class="header-nav-list">
       <% if user_signed_in? %> 
-        <li><%= link_to current_user.nickname, "#", class: "user-name" %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+        <li><%= link_to "新規投稿", new_item_path, class:"header-new-post" %></li>
+        <li><%= link_to current_user.nickname, "#", class: "header-user-name" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header-logout" %></li>
       <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "header-login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "header-sign-up" %></li>
       <% end %>
     </ul>
   </div>
